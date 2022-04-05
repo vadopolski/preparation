@@ -52,30 +52,26 @@ object FindDuplicateScala extends App {
     List(List())
   }
 
-  def getHashCheckSum(path: String): Int = ???
-  def getRead(path: String): Int = ???  // 1 ~ hour
-
-  val tuples = List("root/a/2.txt", "root/c/d/4.txt", "root/4.txt")
-
-  val eventualTuples = tuples.map(x => Future(getRead(x)).map(r => (r, x)))
-
-  val eventualInts: Future[List[(Int, String)]] = Future.sequence(eventualTuples)
-
-  val eventualIntToTuples: Future[Map[Int, List[String]]] = eventualInts.map(x => x.groupBy(t => t._1).mapValues(l => l.map { case (_, n) => n}) )
-
-  import scala.concurrent.duration._
-
-  val intToStrings: Map[Int, List[String]] = Await.result(eventualIntToTuples, 1 second)
-
-
-  // ZIO, monix, cats effect, FS2, .... courutins(GO), Completable Future(Java)
-  //
-
-
-
-
-
-
+//  def getHashCheckSum(path: String): Int = ???
+//  def getRead(path: String): Int = ???  // 1 ~ hour
+//
+//  val tuples = List("root/a/2.txt", "root/c/d/4.txt", "root/4.txt")
+//
+//  val eventualTuples = tuples.map(x => Future(getRead(x)).map(r => (r, x)))
+//
+//  val eventualInts: Future[List[(Int, String)]] = Future.sequence(eventualTuples)
+//
+//  val eventualIntToTuples: Future[Map[Int, List[String]]] = eventualInts.map(x => x.groupBy(t => t._1).mapValues(l => l.map { case (_, n) => n}) )
+//
+//  import scala.concurrent.duration._
+//
+//  val intToStrings: Map[Int, List[String]] = Await.result(eventualIntToTuples, 1 second)
+//
+//
+//  // ZIO, monix, cats effect, FS2, .... courutins(GO), Completable Future(Java)
+//  //
+//
+//
 
 
 
