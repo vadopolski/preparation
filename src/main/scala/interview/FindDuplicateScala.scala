@@ -52,11 +52,15 @@ object FindDuplicateScala extends App {
     List(List())
   }
 
+
+
 //  def getHashCheckSum(path: String): Int = ???
 //  def getRead(path: String): Int = ???  // 1 ~ hour
 //
 //  val tuples = List("root/a/2.txt", "root/c/d/4.txt", "root/4.txt")
 //
+//def getRead(path: String): Int = ???  // 1 ~ hour
+
 //  val eventualTuples = tuples.map(x => Future(getRead(x)).map(r => (r, x)))
 //
 //  val eventualInts: Future[List[(Int, String)]] = Future.sequence(eventualTuples)
@@ -72,6 +76,7 @@ object FindDuplicateScala extends App {
 //  //
 //
 //
+
 
 
 
